@@ -217,9 +217,11 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
 }
 
 .content__video-card {
-  height: 100px;
+  height: 104px;
   display: grid;
   grid-template-columns: 198px 1fr;
+  align-content: center;
+  object-fit: cover;
 }
 
 .content__video-card-thumbnail {
