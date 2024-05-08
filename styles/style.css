@@ -16,6 +16,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
   align-items: center;
 
 }
@@ -50,7 +51,7 @@ ol {
 } 
 
 .content  {
-  padding: 50px 30px 50px 30px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 711px 1fr;
   gap: 30px;
