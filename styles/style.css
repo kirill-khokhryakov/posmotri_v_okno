@@ -55,13 +55,13 @@ ol {
   display: grid;
   grid-template-columns: 711px 1fr;
   gap: 30px;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  gap: 11px;
+  gap: 14px;
   padding-top: 80px;
 }
 
@@ -103,7 +103,7 @@ ol {
   object-fit: cover;
 }
 
-fieldset {
+.search-form__fieldset {
   border: none;
 }
 
@@ -132,7 +132,7 @@ fieldset {
   background-color: transparent;
 }
 
-input[type='checkbox'] + .search-form__pseudo-checkbox {
+.search-form__checkbox[type='checkbox'] + .search-form__pseudo-checkbox {
   border: 1px solid white;
 }
 
@@ -146,7 +146,7 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
 }
 
 .button {
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.6px;
@@ -159,13 +159,13 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
 
 .search-form__submit-button {
   width: 100%;
-  height:34px;
+  min-height: 34px;
   align-self: end;
 }
 
 .more-button {
   width: 100%;
-  height: 34px;
+  min-height: 34px;
 }
 
 .title {
@@ -211,9 +211,8 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 33px;
   overflow-y: auto;
-  height: 300px;
+  height: 303px;
   overflow-x: hidden;
 }
 
@@ -223,13 +222,14 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
   grid-template-columns: 198px 1fr;
   align-content: center;
   object-fit: cover;
+  margin-bottom: 33px;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 107px;
-  background-size: contain;
-  background-position: center;
+  height: 103px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .button:hover, .content__list-item:hover, .search-form__label-text:hover {
@@ -237,16 +237,23 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
   text-underline-offset: 3px;
 }
 
-.button:active, .content__list-item:active {
+.content__list-item:active{
+  text-decoration: none;
+}
+
+.button:active {
   background-color: rgb(255 255 255/0.2);
+  text-decoration: none;
 }
 
 .search-form__textfield:active {
   outline: 1px solid white;
+  text-decoration: none;
 }
 
 .search-form__textfield {
   caret-color: white;
+  color: white;
 }
 
 .button:focus-visible {
@@ -264,7 +271,10 @@ input[type='checkbox'] + .search-form__pseudo-checkbox {
   outline-offset: 1px;
 }
 
-
 .content__card-link:focus-visible {
   outline: 1px solid white;
+}
+
+.content__card-link_current {
+  background-color: rgb(255 255 255/0.2);
 }
