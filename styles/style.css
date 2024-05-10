@@ -75,7 +75,7 @@ ol {
   display: flex;
   gap: 5px;
   flex-direction: column;
-  height: 54px;
+  min-height: 54px;
 }
 
 .search-form__fieldset-title {
@@ -116,7 +116,7 @@ ol {
   border: none;
   outline: none;
   background-color: transparent;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
@@ -232,13 +232,14 @@ ol {
   object-position: center;
 }
 
-.button:hover, .content__list-item:hover, .search-form__label-text:hover {
+.button:hover, .content__card-link:hover, .search-form__label-text:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.content__list-item:active{
+.content__card-link:active{
   text-decoration: none;
+  background-color: rgb(255 255 255/0.2);
 }
 
 .button:active {
